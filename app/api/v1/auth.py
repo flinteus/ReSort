@@ -22,7 +22,7 @@ async def create_user():
 async def login(creds: UserLoginSchema, response: Response):
     if creds.password == "test" and creds.username == "test":
         token = security.create_access_token(uid="1234")
-        response.set_cookie(config.JWT_ACCESS_COOKIE_NAME, token)
+        response.set_cookie(config.JWT_ACCESS_COOKIE_NAME, token, secure=True)
         return {"access_token": token}
     raise HTTPException(status_code=401, detail="Incorrect username or password")
 

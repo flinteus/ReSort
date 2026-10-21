@@ -7,4 +7,4 @@ class User(Base):
     __tablename__ = "users"
     
     id: Mapped[int] = mapped_column(primary_key=True)
-    login: Mapped[int] = mapped_column(unique=True)
+    username: Mapped[str] = mapped_column(unique=True)
