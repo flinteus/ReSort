@@ -1,0 +1,10 @@
+uvicorn 
+fastapi[standard]
+pydantic
+sqlalchemy
+requests
+aiosqlite
+aiohttp
+httpx
+pydantic-settings
+authx
