@@ -20,7 +20,7 @@ services:
     depends_on:
       db:
         condition: service_healthy
-    command: ["alembic", "upgrade", "head"]
+    command: ["sh", "-c", "alembic upgrade head && python -m app.cli.import_guidance catalog/waste-guidance.json --skip-existing"]
   api:
     build: .
     environment: *app_environment

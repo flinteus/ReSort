@@ -119,10 +119,15 @@ def test_import_is_repeatable_and_validated(sorting_client, tmp_path, monkeypatc
     data["preparation_steps"] = ["Updated reviewed instruction"]
     path.write_text(json.dumps([data]))
     assert importer.import_guidance(path) == 1
+    data["preparation_steps"] = ["Should not overwrite reviewed record"]
+    path.write_text(json.dumps([data]))
+    assert importer.import_guidance(path, skip_existing=True) == 0
+    assert db.scalar(select(SortingGuidance).where(
+        SortingGuidance.material_code == "imported_test")).preparation_steps == ["Updated reviewed instruction"]
     assert db.scalar(select(func.count()).select_from(SortingGuidance).where(
         SortingGuidance.material_code == "imported_test")) == 1
     assert db.scalar(select(SortingGuidance).where(
-        SortingGuidance.material_code == "imported_test")).preparation_steps == data["preparation_steps"]
+        SortingGuidance.material_code == "imported_test")).preparation_steps == ["Updated reviewed instruction"]
     path.write_text(json.dumps([data, data]))
     with pytest.raises(ValueError, match="Duplicate"):
         importer.import_guidance(path)

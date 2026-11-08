@@ -1,0 +1,38 @@
+[
+  {
+    "url": "https://www.epa.gov/recycle/composting-home",
+    "title": "US EPA — Composting At Home",
+    "retrieved_at": "2026-11-08",
+    "sha256": "f4d3424812025fe06c95d02c6d491640fbb9f7edc7fb147497f67f9fb6972c41"
+  },
+  {
+    "url": "https://www.epa.gov/recycle/electronics-donation-and-recycling",
+    "title": "US EPA — Electronics Donation and Recycling",
+    "retrieved_at": "2026-11-08",
+    "sha256": "fb609ba11eb95c270372b19da32972e972381273af09cab3d17e532e608405cf"
+  },
+  {
+    "url": "https://www.epa.gov/recycle/how-do-i-recycle-common-recyclables",
+    "title": "US EPA — How Do I Recycle Common Recyclables",
+    "retrieved_at": "2026-11-08",
+    "sha256": "46e6ae4acb787fbd56f808f54f99697297d2bcf713b9a03005bc7f7bb1f2cc36"
+  },
+  {
+    "url": "https://www.epa.gov/recycle/recycling-basics-and-benefits",
+    "title": "US EPA — Recycling Basics and Benefits",
+    "retrieved_at": "2026-11-08",
+    "sha256": "9b5752521aff5e47277d9b6694abfe66ddc3e6e7a27d0fe25e0c5a0eb5aeef0a"
+  },
+  {
+    "url": "https://www.epa.gov/recycle/used-household-batteries",
+    "title": "US EPA — Used Household Batteries",
+    "retrieved_at": "2026-11-08",
+    "sha256": "859a326eff8b3282c5b494ef24c98a7eccceb735c68358aede4eb32d34c1c300"
+  },
+  {
+    "url": "https://www.epa.gov/recycle/used-lithium-ion-batteries",
+    "title": "US EPA — Used Lithium-Ion Batteries",
+    "retrieved_at": "2026-11-08",
+    "sha256": "1ced4fc9f2a55ebeab4bd99a075a9c40521a34a12d6915c9836d1300719f6604"
+  }
+]
