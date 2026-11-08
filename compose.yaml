@@ -28,6 +28,7 @@ services:
       - "127.0.0.1:8000:8000"
     volumes:
       - ./app:/app/app
+      - photo_data:/app/data/photos
     depends_on:
       migrate:
         condition: service_completed_successfully
@@ -39,3 +40,4 @@ services:
       retries: 10
 volumes:
   postgres_data:
+  photo_data:
