@@ -2,6 +2,7 @@ from alembic import context
 
 from app.core.config import settings
 from app.db.database import Base, engine
+from app.models.sorting import SortingGuidance  # noqa: F401
 from app.models.user import User  # noqa: F401: register model metadata
 
 
